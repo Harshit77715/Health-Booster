@@ -1,0 +1,22 @@
+{
+  "name": "web-master-6117",
+  "version": "1.0.0",
+  "description": "CW-Unit-4 Project of Student Name: Harshit Mittal & Student Code: fs40_396117",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Harshit Mittal",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.8.6",
+    "nodemon": "^2.0.22"
+  }
+}
