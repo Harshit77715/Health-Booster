@@ -23,7 +23,7 @@ window.onscroll = function () { fetchDetails() }
 fetchDetails()
 
 function fetchDetails() {
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/products/`, {
+    fetch(`https://health-booster.onrender.com/products/`, {
         method: "GET",
         headers: {
             "authorization": `Bearer ${saveToken.token}`
@@ -32,7 +32,7 @@ function fetchDetails() {
         products.innerText = res.products.length;
     });
 
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/users/`, {
+    fetch(`https://health-booster.onrender.com/users/`, {
         method: "GET",
         headers: {
             "content-type": "application/json",
@@ -55,7 +55,7 @@ function fetchDetails() {
         // console.log(adminUser,customerUser)
     });
 
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/myorder/allorders`, {
+    fetch(`https://health-booster.onrender.com/myorder/allorders`, {
         method: "GET",
         headers: {
             "authorization": `Bearer ${saveToken.token}`
@@ -95,7 +95,7 @@ addnNew.addEventListener("submit",(e)=>{
     if(newImage.value) newObject.img = newImage.value
     if(newQuntity.value) newObject.quantity = newQuntity.value
 
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/products/add`,{
+    fetch(`https://health-booster.onrender.com/products/add`,{
         method:"POST",
         headers:{
             "content-type":"application/json",
@@ -135,7 +135,7 @@ updateProduct.addEventListener("submit",(e)=>{
     if(updateImage.value) newObject.img = updateImage.value
     if(updateQuantity.value) newObject.quantity = updateQuantity.value
     
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/products/update/${updateID.value}`,{
+    fetch(`https://health-booster.onrender.com/products/update/${updateID.value}`,{
         method:"PATCH",
         headers:{
             "content-type":"application/json",
@@ -158,7 +158,7 @@ let deleteID = document.getElementById("deleteID");
 deleteProduct.addEventListener("submit",(e)=>{
     e.preventDefault();
 
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/products/delete/${deleteID.value}`,{
+    fetch(`https://health-booster.onrender.com/products/delete/${deleteID.value}`,{
         method:"DELETE",
         headers:{
             "content-type":"application/json",
@@ -190,7 +190,7 @@ window.addEventListener("load", () => {
 let page = 1; ProductLimit = 14
 
 function fetchData() {
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/products/`)
+    fetch(`https://health-booster.onrender.com/products/`)
         .then((res) => res.json())
         .then((res) => {
             // console.log(res.products);
@@ -219,7 +219,7 @@ function createbtn(page, id) {
 }
 function fetchDataAfterPagination(page, query) {
     // console.log(page);
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/products/?page=${page}&limit=${ProductLimit}`).then((res) => res.json()).then((res) => {
+    fetch(`https://health-booster.onrender.com/products/?page=${page}&limit=${ProductLimit}`).then((res) => res.json()).then((res) => {
         // console.log(res.products);
         getCardList(res.products)
     })

@@ -1,4 +1,4 @@
-I have created a clone of an Indian health supplement-buying website called ***HealthKart.com***. 
+During my construct week, I have created a clone of an Indian health supplement-buying website called ***HealthKart.com***. 
 A health supplement-buying site helps to find the right supplement according to the consumer's fitness goal. The company is headquartered in Gurgaon, Haryana.
 
 Developed a basic flow for the Front End of the website.
@@ -31,11 +31,11 @@ Also created a entire **Back-End** of the website with help of JavaScript and No
 
 ***Back-End Deployed on Rendor.com***
 
-**Back-End Deployed Link:- https://moral-riddle-2098-project-server.onrender.com/**
+**Back-End Deployed Link:- https://health-booster.onrender.com/**
 
 ***Project App: Deployed on Netlify.com***
 
-***HealthBooster.com: https://healthboosterproject.netlify.app/***
+***HealthBooster.com: https://health-booster.netlify.app/***
 
 
 ***

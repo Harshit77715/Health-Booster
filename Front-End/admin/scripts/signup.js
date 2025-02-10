@@ -1,4 +1,4 @@
-const BaseUrl = "https://moral-riddle-2098-project-server.onrender.com";
+const BaseUrl = "https://health-booster.onrender.com";
 const registrationUrl = `${BaseUrl}/users/register`
 
 let firstnameError = document.getElementById("firstname-error")

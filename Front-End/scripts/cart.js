@@ -29,7 +29,7 @@ fetchCartLength(), fetchWishlistLength();
 
 function fetchCartLength() {
     // console.log("HIII");
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/cart/`, {
+    fetch(`https://health-booster.onrender.com/cart/`, {
         method: "GET",
         headers: {
             "authorization": `Bearer ${saveToken.token}`
@@ -47,7 +47,7 @@ function fetchCartLength() {
 
 function fetchWishlistLength() {
     // console.log("HIII");
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/wishlist/`, {
+    fetch(`https://health-booster.onrender.com/wishlist/`, {
         method: "GET",
         headers: {
             "authorization": `Bearer ${saveToken.token}`
@@ -67,7 +67,7 @@ window.addEventListener("load", () => {
 })
 // console.log(cartValue,cartQuntity);
 function fetchData() {
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/cart/`, {
+    fetch(`https://health-booster.onrender.com/cart/`, {
         method: "GET",
         headers: {
             "authorization": `Bearer ${saveToken.token}`
@@ -174,7 +174,7 @@ function getCard(dataId, title, brand, category, rating, price, avatar, quantity
             }
             // console.log(newQuntityObject);
             const id = e.target.dataset.id;
-            fetch(`https://moral-riddle-2098-project-server.onrender.com/cart/update/${id}`, {
+            fetch(`https://health-booster.onrender.com/cart/update/${id}`, {
                 method: "PATCH",
                 headers: {
                     "authorization": `Bearer ${saveToken.token}`,
@@ -201,7 +201,7 @@ function getCard(dataId, title, brand, category, rating, price, avatar, quantity
         }
         // console.log(newQuntityObject);
         const id = e.target.dataset.id;
-        fetch(`https://moral-riddle-2098-project-server.onrender.com/cart/update/${id}`, {
+        fetch(`https://health-booster.onrender.com/cart/update/${id}`, {
             method: "PATCH",
             headers: {
                 "authorization": `Bearer ${saveToken.token}`,
@@ -222,7 +222,7 @@ function getCard(dataId, title, brand, category, rating, price, avatar, quantity
     removeButton.addEventListener("click", (e) => {
         let id = e.target.dataset.id
 console.log(id);
-        fetch(`https://moral-riddle-2098-project-server.onrender.com/cart/delete/${id}`, {
+        fetch(`https://health-booster.onrender.com/cart/delete/${id}`, {
             method: "DELETE",
             headers: {
                 "authorization": `Bearer ${saveToken.token}`

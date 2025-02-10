@@ -1,4 +1,4 @@
-const BaseUrl = "https://moral-riddle-2098-project-server.onrender.com";
+const BaseUrl = "https://health-booster.onrender.com";
 const loginUrl = `${BaseUrl}/users/login`
 
 var saveToken = JSON.parse(sessionStorage.getItem("token")) || {};

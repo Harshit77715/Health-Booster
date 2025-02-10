@@ -1,154 +1,13 @@
-
 // session storage for token
 var saveToken = JSON.parse(sessionStorage.getItem("token"));
-// var saveToken = JSON.parse(sessionStorage.getItem("token")) || {};
 
-// let products = document.getElementById("products");
-// let admin = document.getElementById("admin");
-// let customer = document.getElementById("customer");
-// let income = document.getElementById("income");
-// let search = document.getElementById("search");
-
-// search.addEventListener("search",()=>{
-//     console.log(search.value);
-// })
-// var saveToken = JSON.parse(sessionStorage.getItem("token"));
 
 if (!saveToken) {
     alert("Please Log in First")
     container.innerHTML = null;
     container.innerHTML = `<h3> Please Log in First</h3>`
 }
-// window.onscroll = function () { fetchDetails() }
-// fetchDetails()
 
-// function fetchDetails() {
-// fetch(`https://moral-riddle-2098-project-server.onrender.com/products/`, {
-//     method: "GET",
-//     headers: {
-//         "authorization": `Bearer ${saveToken.token}`
-//     }
-// }).then((res) => res.json()).then((res) => {
-//     products.innerText = res.products.length;
-// });
-
-// fetch(`https://moral-riddle-2098-project-server.onrender.com/users/`, {
-//     method: "GET",
-//     headers: {
-//         "content-type": "application/json",
-//         "authorization": `Bearer ${saveToken.token}`
-//     }
-// }).then((res) => res.json()).then((res) => {
-//     let adminUser = 0;
-//     let customerUser = 0;
-//     // console.log(res.users);
-//     for (let i = 0; i < res.users.length; i++) {
-//         // console.log(res.users[i]);
-//         if (res.users[i].role == "Admin") {
-//             adminUser++;
-//         } else {
-//             customerUser++;
-//         }
-//         admin.innerText = adminUser;
-//         customer.innerText = customerUser;
-//     }
-//     // console.log(adminUser,customerUser)
-// });
-
-// fetch(`https://moral-riddle-2098-project-server.onrender.com/myorder/allorders`, {
-//     method: "GET",
-//     headers: {
-//         "authorization": `Bearer ${saveToken.token}`
-//     }
-// }).then((res) => res.json()).then((res) => {
-//     // console.log(res)
-//     let ordersCost = 0;
-//     for (let i = 0; i < res.myorder.length; i++) {
-//         // console.log(res.myorder[i].cost);
-//         if (res.myorder[i].cost) {
-//             ordersCost += res.myorder[i].cost;
-//         }
-//     }
-//     // console.log(ordersCost);
-//     income.innerText = ordersCost;
-// }).catch((err) => console.log(err));
-// }
-
-// let addnNew = document.getElementById("addNew");
-
-// let newtitle = document.getElementById("newtitle");
-// let newImage = document.getElementById("newImage");
-// let newBrand = document.getElementById("newBrand");
-// let newCategory = document.getElementById("newCategory");
-// let newRating = document.getElementById("newRating");
-// let newPrice = document.getElementById("newPrice");
-// let newQuntity = document.getElementById("newQuntity");
-
-// addnNew.addEventListener("submit",(e)=>{
-//     e.preventDefault();
-//     let newObject = {}
-//     if(newtitle.value) newObject.title = newtitle.value
-//     if(newBrand.value) newObject.brand = newBrand.value
-//     if(newCategory.value) newObject.category = newCategory.value
-//     if(newRating.value) newObject.rating = newRating.value
-//     if(newPrice.value) newObject.price = newPrice.value
-//     if(newImage.value) newObject.img = newImage.value
-//     if(newQuntity.value) newObject.quantity = newQuntity.value
-
-//     fetch(`https://moral-riddle-2098-project-server.onrender.com/products/add`,{
-//         method:"POST",
-//         headers:{
-//             "content-type":"application/json",
-//             "authorization":`Bearer ${saveToken.token}`
-//         },
-//         body:JSON.stringify(newObject)
-//     }).then((res)=>res.json()).then((res)=>{
-//         console.log(res.msg)
-//         alert(res.msg)
-//         fetchData()
-//     }).catch((err)=>console.log(err.msg))
-// })
-// // "title": { type: String, required: true},
-// //   "brand": { type: String, required: true},
-// //   "category": { type: String, required: true},
-// //   "rating": { type: Number, required: true, default: 2.8, min: 0.1, max: 5.1 },
-// //   "price": { type: Number, required: true, default: 389 },
-// //   "img": { type: String, default: "https://img10.hkrtcdn.com/13665/prd_1366409-MuscleBlaze-Ayurveda-for-Performance-Ashwagandha-500mg-60-tablets_o.jpg" },
-// //   "quantit
-
-// let updateProduct = document.getElementById("updateProduct");
-
-// let updateID = document.getElementById("updateID");
-// let updateTitle = document.getElementById("updateTitle");
-// let updateImage = document.getElementById("updateImage");
-// let updateRating = document.getElementById("updateRating");
-// let updatePrice = document.getElementById("updatePrice");
-// let updateQuantity = document.getElementById("updateQuantity");
-
-
-// updateProduct.addEventListener("submit",(e)=>{
-//     e.preventDefault();
-//     let newObject = {}
-//     if(updateTitle.value) newObject.title = updateTitle.value
-//     if(updateRating.value) newObject.rating = updateRating.value
-//     if(updatePrice.value) newObject.price = updatePrice.value
-//     if(updateImage.value) newObject.img = updateImage.value
-//     if(updateQuantity.value) newObject.quantity = updateQuantity.value
-
-//     fetch(`https://moral-riddle-2098-project-server.onrender.com/products/update/${updateID.value}`,{
-//         method:"PATCH",
-//         headers:{
-//             "content-type":"application/json",
-//             "authorization":`Bearer ${saveToken.token}`
-//         },
-//         body:JSON.stringify(newObject)
-//     }).then((res)=>res.json()).then((res)=>{
-//         console.log(res.msg)
-//         alert(res.msg)
-//         fetchData()
-
-//     }).catch((err)=>console.log(err.msg))
-// })
 
 
 let deleteProduct = document.getElementById("deleteProduct");
@@ -158,7 +17,7 @@ let deleteID = document.getElementById("deleteID");
 deleteProduct.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/users/delete/${deleteID.value}`, {
+    fetch(`https://health-booster.onrender.com/users/delete/${deleteID.value}`, {
         method: "DELETE",
         headers: {
             "content-type": "application/json",
@@ -191,7 +50,7 @@ window.addEventListener("load", () => {
 let page = 1; ProductLimit = 4
 
 function fetchData() {
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/users/`)
+    fetch(`https://health-booster.onrender.com/users/`)
         .then((res) => res.json())
         .then((res) => {
             console.log(res);
@@ -221,7 +80,7 @@ function createbtn(page, id) {
 }
 function fetchDataAfterPagination(page, query) {
     // console.log(page);
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/users/?page=${page}&limit=${ProductLimit}`).then((res) => res.json()).then((res) => {
+    fetch(`https://health-booster.onrender.com/users/?page=${page}&limit=${ProductLimit}`).then((res) => res.json()).then((res) => {
         console.log(res.users);
         console.log(page,ProductLimit);
         getCardList(res.users)
@@ -310,7 +169,7 @@ function getCard(dataId, title, brand, category, rating, price, avatar, quantity
 
     deleteUserId.addEventListener("click",(e)=>{
         // console.log(e.target.dataset.id)
-        fetch(`https://moral-riddle-2098-project-server.onrender.com/users/delete/${e.target.dataset.id}`,{
+        fetch(`https://health-booster.onrender.com/users/delete/${e.target.dataset.id}`,{
             method:"DELETE",
             headers:{
                 "content-type":"application/json",

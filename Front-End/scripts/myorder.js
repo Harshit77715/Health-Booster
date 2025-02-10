@@ -1,5 +1,3 @@
-
-
 // session storage for token
 var saveToken = JSON.parse(sessionStorage.getItem("token"));
 
@@ -22,7 +20,7 @@ fetchCartLength(), fetchWishlistLength()
 
 function fetchCartLength() {
     // console.log("HIII");
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/cart/`, {
+    fetch(`https://health-booster.onrender.com/cart/`, {
         method: "GET",
         headers: {
             "authorization": `Bearer ${saveToken.token}`
@@ -39,7 +37,7 @@ function fetchCartLength() {
 
 function fetchWishlistLength() {
     // console.log("HIII");
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/wishlist/`, {
+    fetch(`https://health-booster.onrender.com/wishlist/`, {
         method: "GET",
         headers: {
             "authorization": `Bearer ${saveToken.token}`
@@ -57,7 +55,7 @@ function fetchWishlistLength() {
 window.addEventListener("load", () => fetchData())
 
 function fetchData() {
-    fetch(`https://moral-riddle-2098-project-server.onrender.com/myorder/`, {
+    fetch(`https://health-booster.onrender.com/myorder/`, {
         method: "GET",
         headers: {
             "authorization": `Bearer ${saveToken.token}`
