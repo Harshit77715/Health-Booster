@@ -23,9 +23,9 @@ Also created a entire **Back-End** of the website with help of JavaScript and No
 
 ***Technology Stacks***
 
-**Front-End**: ***CSS | HTML | JavaScript***
+**Front-End**: ***HTML | CSS | JavaScript***
 
-**Back-End**: ***JavaScript | Node.js | Express JS | MongoDB | Mongoose | npm***
+**Back-End**: ***Node.js | Express JS | MongoDB***
 
 ***
 
